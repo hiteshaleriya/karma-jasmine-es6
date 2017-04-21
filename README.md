@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hiteshaleriya/karma-jasmine-es6.svg?branch=master)](https://travis-ci.org/hiteshaleriya/karma-jasmine-es6)
+
 # Unit testing ES6 classes with Jasmine and Karma.
 
 ### test-context.js
