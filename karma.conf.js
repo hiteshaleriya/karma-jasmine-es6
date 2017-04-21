@@ -50,7 +50,7 @@ module.exports = function(config) {
         reporters: ['dots', 'coverage', 'junit'],
 
         coverageReporter: {
-            type: 'cobertura',
+            type: 'cobertura', //lcov
             dir: 'test_js',
             subdir: '.'
         },

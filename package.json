@@ -9,6 +9,7 @@
     "babel-loader": "^5.0.0",
     "grunt": "0.4.1",
     "grunt-karma": "^2.0.0",
+    "grunt-karma-coveralls": "^2.5.4",
     "istanbul-instrumenter-loader": "^2.0.0",
     "jasmine": "^2.2.1",
     "jasmine-core": "^2.2.0",
