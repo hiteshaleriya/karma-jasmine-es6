@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/hiteshaleriya/karma-jasmine-es6.svg?branch=master)](https://travis-ci.org/hiteshaleriya/karma-jasmine-es6)
+[![Build Status](https://travis-ci.org/hiteshaleriya/karma-jasmine-es6.svg?branch=master)](https://travis-ci.org/hiteshaleriya/karma-jasmine-es6) [![Coverage Status](https://coveralls.io/repos/github/hiteshaleriya/karma-jasmine-es6/badge.svg?branch=master)](https://coveralls.io/github/hiteshaleriya/karma-jasmine-es6?branch=master)
 
 # Unit testing ES6 classes with Jasmine and Karma.
 
