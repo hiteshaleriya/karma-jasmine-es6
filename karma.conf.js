@@ -33,7 +33,13 @@ module.exports = function(config) {
             module: {
                 loaders: [
                     { test: /\.js/, exclude: /node_modules/, loader: 'babel-loader' }
-                ]
+                ],
+                // delays coverage until tests are run
+                postLoaders: [{
+                    test: /\.js/,
+                    exclude: /node_modules|test/,
+                    loader: 'istanbul-instrumenter'
+                }]
             },
             watch: true
         },
@@ -41,10 +47,18 @@ module.exports = function(config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['dots', 'coverage'],
+        reporters: ['dots', 'coverage', 'junit'],
+
         coverageReporter: {
-            type: 'html',
-            dir: 'coverage/'
+            type: 'cobertura',
+            dir: 'test_js',
+            subdir: '.'
+        },
+
+        junitReporter: {
+            outputDir: 'test_js',
+            outputFile: 'output.xml',
+            useBrowserName: false
         },
 
 
