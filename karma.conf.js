@@ -31,15 +31,22 @@ module.exports = function(config) {
 
         webpack: {
             module: {
-                loaders: [
-                    { test: /\.js/, exclude: /node_modules/, loader: 'babel-loader' }
-                ],
-                // delays coverage until tests are run
-                postLoaders: [{
-                    test: /\.js/,
-                    exclude: /node_modules|test/,
-                    loader: 'istanbul-instrumenter'
-                }]
+                rules: [
+                    {
+                        test: /\.js/,
+                        exclude: /node_modules/,
+                        loader: 'babel-loader',
+                        // query: ['loader', { esModules: false }]
+                    },
+                // { presets: [['presetName', {option: value}]] }
+                    // delays coverage until tests are run
+                    {
+                        enforce: 'post',
+                        test: /\.js/,
+                        exclude: /node_modules|test/,
+                        loader: 'istanbul-instrumenter-loader'
+                    }]
+                
             },
             watch: true
         },
