@@ -15,7 +15,8 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            { pattern: 'test-context.js' }
+            //{ pattern: 'test-context.js' }
+            'test/*.js'
         ],
 
 
@@ -26,31 +27,36 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'test-context.js': ['webpack']
+            //'test-context.js': ['webpack'],
+            'test/*.js': ['webpack']
         },
-
         webpack: {
             module: {
-                loaders: [
-                    { test: /\.js/, exclude: /node_modules/, loader: 'babel-loader' }
-                ],
-                // delays coverage until tests are run
-                postLoaders: [{
+                loaders: [{
+                    test: /\.js?/,
+                    loader: 'babel-loader',
+                    exclude: /node_modules/,
+                    query: {
+                        presets: ['es2015', 'stage-2']
+                    }
+                }, {
                     test: /\.js/,
-                    exclude: /node_modules|test/,
-                    loader: 'istanbul-instrumenter'
+                    exclude: /node_modules|test|test_js/,
+                    loader: 'istanbul-instrumenter-loader',
+                    query: {
+                        esModules: true
+                    }
                 }]
             },
             watch: true
         },
-
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         reporters: ['dots', 'coverage', 'junit'],
 
         coverageReporter: {
-            type: 'lcov', //lcov
+            type: 'html', //lcov
             dir: 'test_js',
             subdir: '.'
         },
