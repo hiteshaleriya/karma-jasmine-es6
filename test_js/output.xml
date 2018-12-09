@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<testsuite name="PhantomJS 2.1.1 (Linux 0.0.0)" package="" timestamp="2017-12-11T17:08:05" id="0" hostname="hitesh-Latitude-E6540" tests="2" errors="0" failures="0" time="0.007">
+<testsuite name="PhantomJS 2.1.1 (Mac OS X 0.0.0)" package="" timestamp="2018-12-09T15:52:01" id="0" hostname="HYRDMACPRO188" tests="2" errors="0" failures="0" time="0.002">
   <properties>
-    <property name="browser.fullName" value="Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
   </properties>
-  <testcase name="Calculator should add two numbers" time="0.006" classname="Calculator"/>
-  <testcase name="Calculator should multiply two numbers" time="0.001" classname="Calculator"/>
+  <testcase name="Calculator should add two numbers" time="0.002" classname="Calculator"/>
+  <testcase name="Calculator should multiply two numbers" time="0" classname="Calculator"/>
   <system-out>
     <![CDATA[
 ]]>

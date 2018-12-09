@@ -32,18 +32,18 @@ module.exports = function(config) {
         },
         webpack: {
             module: {
-                loaders: [{
+                rules: [{
                     test: /\.js?/,
                     loader: 'babel-loader',
                     exclude: /node_modules/,
-                    query: {
+                    options: {
                         presets: ['es2015', 'stage-2']
                     }
                 }, {
                     test: /\.js/,
                     exclude: /node_modules|test|test_js/,
                     loader: 'istanbul-instrumenter-loader',
-                    query: {
+                    options: {
                         esModules: true
                     }
                 }]
